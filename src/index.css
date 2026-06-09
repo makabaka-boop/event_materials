@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@layer components {
+  .input-underline {
+    @apply bg-transparent border-0 border-b border-dashed border-slate-300 focus:border-ink-800 focus:outline-none focus:ring-0 px-1 py-0.5 text-sm transition-colors;
+  }
+  .input-field {
+    @apply w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-ink-800/20 focus:border-ink-800 transition-colors bg-white;
+  }
+  .select-field {
+    @apply px-3 py-1.5 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-ink-800/20 focus:border-ink-800 bg-white cursor-pointer;
+  }
+  .btn-primary {
+    @apply px-4 py-2 bg-ink-800 text-white rounded-lg text-sm font-medium hover:bg-ink-700 active:bg-ink-900 transition-colors shadow-sm hover:shadow-md hover:-translate-y-px active:translate-y-0 active:shadow-sm;
+  }
+  .btn-secondary {
+    @apply px-4 py-2 bg-white border border-slate-200 text-slate-700 rounded-lg text-sm font-medium hover:bg-slate-50 hover:border-slate-300 transition-colors;
+  }
+  .btn-danger {
+    @apply px-4 py-2 bg-brick-500 text-white rounded-lg text-sm font-medium hover:bg-brick-600 transition-colors;
+  }
+  .btn-ghost {
+    @apply px-3 py-1.5 text-slate-500 rounded-lg text-sm hover:bg-slate-100 hover:text-slate-700 transition-colors;
+  }
+  .table-cell {
+    @apply px-4 py-3 text-sm;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+  accent-color: #1e3a5f;
+}
